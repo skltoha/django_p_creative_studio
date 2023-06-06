@@ -9,22 +9,22 @@
     <title>{% block title %}{% endblock title %}</title>
 
     <!-- font icons -->
-    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css" />
+    <link rel="stylesheet" href="{% static 'vendors/themify-icons/css/themify-icons.css' %}" />
 
     <!-- Bootstrap + Creative Studio main styles -->
-    <link rel="stylesheet" href="css/creative-studio.css" />
+    <link rel="stylesheet" href="{% static 'css/creative-studio.css' %}" />
   </head>
   <body>
     {% block template %}{% endblock template %}
 
     <!-- core  -->
-    <script src="vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="vendors/bootstrap/bootstrap.bundle.js"></script>
+    <script src="{% static 'vendors/jquery/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/bootstrap.bundle.js' %}"></script>
 
     <!-- bootstrap affix -->
-    <script src="vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="{% static 'vendors/bootstrap/bootstrap.affix.js' %}"></script>
 
     <!-- Creative Studio js -->
-    <script src="js/creative-studio.js"></script>
+    <script src="{% static 'js/creative-studio.js' %}"></script>
   </body>
 </html>
