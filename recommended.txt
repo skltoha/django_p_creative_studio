@@ -1,0 +1,14 @@
+# To activate this run 
+#
+# pip install -r requirements.txt
+# python -m django --version
+#
+# On a Macintosh this should be python3 and pip3
+#
+django==4.2.2
+pillow==9.5.0
+asgiref==3.7.2
+pip==23.1.2
+setuptools==67.7.2
+sqlparse==0.4.4
+wheel==0.40.0
