@@ -16,6 +16,8 @@ class clientsayAdmin(admin.ModelAdmin):
     list_display = ('name', 'comments', 'img')
 
 
+
 admin.site.register(contactus, contactusAdmin)
 admin.site.register(team, TeamAdmin)
 admin.site.register(clientsay, clientsayAdmin)
+
