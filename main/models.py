@@ -8,7 +8,6 @@ class contactus(models.Model):
     client_message  = models.TextField(max_length=500)
     
     
-
 class team(models.Model):
     name = models.CharField(max_length = 200)
     img = models.ImageField(upload_to = "images/")
