@@ -48,9 +48,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
-          <li class="nav-item">
+          {% comment %} <li class="nav-item">
             <a class="nav-link btn btn-primary btn-sm ml-lg-3" href="components.html">Components</a>
-          </li>
+          </li> {% endcomment %}
         </ul>
       </div>
     </div>
@@ -398,40 +398,19 @@
       <h6 class="section-subtitle text-center">Testimonial</h6>
       <h6 class="section-title text-center mb-6">What Our Clients Says</h6>
       <div class="row">
+        {% for p in clientsay_info %}
         <div class="col-md-6">
           <div class="testimonial-wrapper">
             <div class="img-holder">
-              <img
-                src="assets/imgs/avatar-5.jpg"
-                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page"
-              />
+              <img src="{{ p.img.url }}" alt="client picture" />
             </div>
             <div class="body">
-              <p class="subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum
-                omnis blanditiis corporis perspiciatis adipisci nihil.
-              </p>
-              <h6 class="title">Richard Reb</h6>
+              <p class="subtitle">{{ p.comments }}</p>
+              <h6 class="title">{{ p.name }}</h6>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="testimonial-wrapper">
-            <div class="img-holder">
-              <img
-                src="assets/imgs/avatar-6.jpg"
-                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Creative studio Landing page"
-              />
-            </div>
-            <div class="body">
-              <p class="subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque doloribus autem aperiam earum nostrum
-                omnis blanditiis corporis perspiciatis adipisci nihil.
-              </p>
-              <h6 class="title">John Doe</h6>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -607,7 +586,7 @@
                 type="text"
                 class="form-control form-control-lg"
                 id="exampleInputPassword1"
-                placeholder="Name"
+                placeholder="Enter Name"
                 name="clname"
                 required
               />
@@ -619,7 +598,7 @@
                 cols="30"
                 rows="7"
                 class="form-control form-control-lg"
-                placeholder="Message"
+                placeholder="Message here"
                 required
               ></textarea>
             </div>

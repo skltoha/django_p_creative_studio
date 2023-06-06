@@ -19,4 +19,8 @@ class team(models.Model):
     dropbox = models.URLField(max_length=200, null=True)
     twitter = models.URLField(max_length=200, null=True)
 
- 
+
+class clientsay(models.Model):
+    name       = models.CharField(max_length=100)
+    comments   = models.TextField(max_length=200)
+    img        = models.ImageField(upload_to='images/')

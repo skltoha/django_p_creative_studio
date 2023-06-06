@@ -1,15 +1,18 @@
 from django.shortcuts import render
-from . models import (contactus, team)
+from . models import (contactus, team, clientsay)
 
 # Create your views here.
 
 
 def index(request):
     team_info = team.objects.all()
+    clientsay_info = clientsay.objects.all()
     msg = f'hi, '
     contex = {
         'msg': msg,
         'team_info': team_info,
+        'clientsay_info': clientsay_info,
+
     }
     return render(request, 'index.html', contex)
 
